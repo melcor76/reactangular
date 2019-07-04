@@ -22,8 +22,14 @@
               "apps/angularapp/src/favicon.ico",
               "apps/angularapp/src/assets"
             ],
-            "styles": ["apps/angularapp/src/styles.css"],
-            "scripts": []
+            "styles": [
+              "apps/angularapp/src/styles.css"
+            ],
+            "scripts": [
+              {
+                "input": "node_modules/document-register-element/build/document-register-element.js"
+              }
+            ]
           },
           "configurations": {
             "production": {
@@ -76,7 +82,10 @@
               "apps/angularapp/tsconfig.app.json",
               "apps/angularapp/tsconfig.spec.json"
             ],
-            "exclude": ["**/node_modules/**", "!apps/angularapp/**"]
+            "exclude": [
+              "**/node_modules/**",
+              "!apps/angularapp/**"
+            ]
           }
         },
         "test": {
@@ -111,7 +120,10 @@
           "builder": "@angular-devkit/build-angular:tslint",
           "options": {
             "tsConfig": "apps/angularapp-e2e/tsconfig.e2e.json",
-            "exclude": ["**/node_modules/**", "!apps/angularapp-e2e/**"]
+            "exclude": [
+              "**/node_modules/**",
+              "!apps/angularapp-e2e/**"
+            ]
           }
         }
       }
@@ -134,7 +146,9 @@
               "apps/reactapp/src/favicon.ico",
               "apps/reactapp/src/assets"
             ],
-            "styles": ["apps/reactapp/src/styles.css"],
+            "styles": [
+              "apps/reactapp/src/styles.css"
+            ],
             "scripts": []
           },
           "configurations": {
@@ -180,7 +194,10 @@
               "apps/reactapp/tsconfig.app.json",
               "apps/reactapp/tsconfig.spec.json"
             ],
-            "exclude": ["**/node_modules/**", "!apps/reactapp/**"]
+            "exclude": [
+              "**/node_modules/**",
+              "!apps/reactapp/**"
+            ]
           }
         },
         "test": {
@@ -214,10 +231,43 @@
           "builder": "@angular-devkit/build-angular:tslint",
           "options": {
             "tsConfig": "apps/reactapp-e2e/tsconfig.e2e.json",
-            "exclude": ["**/node_modules/**", "!apps/reactapp-e2e/**"]
+            "exclude": [
+              "**/node_modules/**",
+              "!apps/reactapp-e2e/**"
+            ]
           }
         }
       }
+    },
+    "elements": {
+      "projectType": "library",
+      "root": "libs/elements",
+      "sourceRoot": "libs/elements/src",
+      "prefix": "reactangular",
+      "architect": {
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "libs/elements/tsconfig.lib.json",
+              "libs/elements/tsconfig.spec.json"
+            ],
+            "exclude": [
+              "**/node_modules/**",
+              "!libs/elements/**"
+            ]
+          }
+        },
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "options": {
+            "jestConfig": "libs/elements/jest.config.js",
+            "tsConfig": "libs/elements/tsconfig.spec.json",
+            "setupFile": "libs/elements/src/test-setup.ts"
+          }
+        }
+      },
+      "schematics": {}
     }
   },
   "cli": {
