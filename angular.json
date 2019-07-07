@@ -23,7 +23,7 @@
               "apps/angularapp/src/assets"
             ],
             "styles": [
-              "./node_modules/@angular/material/prebuilt-themes/deeppurple-amber.css",
+              "./node_modules/@angular/material/prebuilt-themes/indigo-pink.css",
               "apps/angularapp/src/styles.css"
             ],
             "scripts": [
@@ -83,10 +83,7 @@
               "apps/angularapp/tsconfig.app.json",
               "apps/angularapp/tsconfig.spec.json"
             ],
-            "exclude": [
-              "**/node_modules/**",
-              "!apps/angularapp/**"
-            ]
+            "exclude": ["**/node_modules/**", "!apps/angularapp/**"]
           }
         },
         "test": {
@@ -121,10 +118,7 @@
           "builder": "@angular-devkit/build-angular:tslint",
           "options": {
             "tsConfig": "apps/angularapp-e2e/tsconfig.e2e.json",
-            "exclude": [
-              "**/node_modules/**",
-              "!apps/angularapp-e2e/**"
-            ]
+            "exclude": ["**/node_modules/**", "!apps/angularapp-e2e/**"]
           }
         }
       }
@@ -147,9 +141,7 @@
               "apps/reactapp/src/favicon.ico",
               "apps/reactapp/src/assets"
             ],
-            "styles": [
-              "apps/reactapp/src/styles.css"
-            ],
+            "styles": ["apps/reactapp/src/styles.css"],
             "scripts": []
           },
           "configurations": {
@@ -195,10 +187,7 @@
               "apps/reactapp/tsconfig.app.json",
               "apps/reactapp/tsconfig.spec.json"
             ],
-            "exclude": [
-              "**/node_modules/**",
-              "!apps/reactapp/**"
-            ]
+            "exclude": ["**/node_modules/**", "!apps/reactapp/**"]
           }
         },
         "test": {
@@ -232,10 +221,7 @@
           "builder": "@angular-devkit/build-angular:tslint",
           "options": {
             "tsConfig": "apps/reactapp-e2e/tsconfig.e2e.json",
-            "exclude": [
-              "**/node_modules/**",
-              "!apps/reactapp-e2e/**"
-            ]
+            "exclude": ["**/node_modules/**", "!apps/reactapp-e2e/**"]
           }
         }
       }
@@ -253,10 +239,7 @@
               "libs/elements/tsconfig.lib.json",
               "libs/elements/tsconfig.spec.json"
             ],
-            "exclude": [
-              "**/node_modules/**",
-              "!libs/elements/**"
-            ]
+            "exclude": ["**/node_modules/**", "!libs/elements/**"]
           }
         },
         "test": {

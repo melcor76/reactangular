@@ -2,7 +2,7 @@ import { Component, EventEmitter, Output, Input } from '@angular/core';
 
 @Component({
   template: `
-    <button (click)="add()">Buy</button>
+    <button mat-raised-button color="primary" (click)="add()">Buy</button>
   `
 })
 export class AddToCartComponent {
