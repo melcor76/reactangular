@@ -6,7 +6,8 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
+  counter = 0;
   buy(type: CustomEvent) {
-    console.log(type);
+    this.counter++;
   }
 }

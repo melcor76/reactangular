@@ -22,12 +22,12 @@ import { Component, Input, ViewEncapsulation } from '@angular/core';
         alt="Cart"
         style="width:100%"
       />
-      <div class="badge" data-badge="4"></div>
+      <div class="badge" attr.data-badge="{{ counter }}"></div>
     </div>
   `,
   styleUrls: ['cart.component.css'],
   encapsulation: ViewEncapsulation.ShadowDom
 })
 export class CartComponent {
-  @Input() count: number;
+  @Input() counter: number;
 }
