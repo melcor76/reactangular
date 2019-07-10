@@ -11,5 +11,6 @@ export class AddToCartComponent {
 
   add() {
     this.addToCart.emit(this.type);
+    console.log(this.type);
   }
 }
