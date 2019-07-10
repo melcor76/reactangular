@@ -3,7 +3,7 @@ import React from 'react';
 import './app.css';
 
 const divStyle = {
-  width: '300 px'
+  width: '300px'
 };
 
 export const App = () => {
@@ -19,8 +19,9 @@ export const App = () => {
               height="40"
             />
           </a>
+          <img src="../assets/react.png" alt="React" width="40" height="40" />
         </div>
-        <img src="../assets/react.png" alt="React" width="40" height="40" />
+        <shopping-cart counter={0} />
       </header>
       <div>
         <img src="../assets/react.png" alt="Avatar" width="300" />

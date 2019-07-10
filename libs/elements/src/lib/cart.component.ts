@@ -25,7 +25,35 @@ import { Component, Input, ViewEncapsulation } from '@angular/core';
       <div class="badge" attr.data-badge="{{ counter }}"></div>
     </div>
   `,
-  styleUrls: ['cart.component.css'],
+  styles: [
+    `
+      .container {
+        position: relative;
+        text-align: center;
+        width: 30px;
+        height: 30px;
+      }
+
+      .badge {
+        position: relative;
+      }
+      .badge[data-badge]:after {
+        content: attr(data-badge);
+        position: absolute;
+        top: -38px;
+        right: -6px;
+        font-size: 0.7em;
+        background: green;
+        color: white;
+        width: 18px;
+        height: 18px;
+        text-align: center;
+        line-height: 18px;
+        border-radius: 50%;
+        box-shadow: 0 0 1px #333;
+      }
+    `
+  ],
   encapsulation: ViewEncapsulation.ShadowDom
 })
 export class CartComponent {
