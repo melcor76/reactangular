@@ -5,8 +5,20 @@ import { Component } from '@angular/core';
   templateUrl: './app.component.html',
   styles: [
     `
-      .header {
+      .flex-row {
         display: flex;
+        align-items: center;
+      }
+      table {
+        border-collapse: collapse;
+        margin-bottom: 5px;
+      }
+
+      table,
+      th,
+      td {
+        border: 1px solid black;
+        padding: 3px;
       }
     `
   ]
