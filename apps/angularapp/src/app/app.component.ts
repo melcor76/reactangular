@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import '@reactangular/elements';
 
 @Component({
   selector: 'reactangular-root',

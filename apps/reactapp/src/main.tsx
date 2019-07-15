@@ -1,5 +1,3 @@
-import '@reactangular/elements';
-
 import React from 'react';
 import ReactDOM from 'react-dom';
 
